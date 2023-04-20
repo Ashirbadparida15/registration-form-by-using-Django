@@ -49,6 +49,7 @@ def LoginPage(request):
             login(request,user)
             return redirect('home')
         else:
-            return HttpResponse ("Username or Password is incorrect!!!")
+            return redirect('home')
+            # return HttpResponse ("Username or Password is incorrect!!!")
 
      return render(request,'login.html')
