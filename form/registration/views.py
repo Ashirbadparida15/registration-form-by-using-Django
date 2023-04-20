@@ -13,7 +13,7 @@ def SignupPage(request):
        
 
     if request.method=='POST':
-        user_type = request.POST.get('user')
+        # user_type = request.POST.get('user')
         fname=request. POST.get('first_name')
         lname=request.POST.get('last_name')
         uname=request.POST.get('username')
@@ -31,7 +31,7 @@ def SignupPage(request):
        
         else:
             hashed_pass=make_password(pass1)
-            my_user=User.objects.create_user(username=uname,password=hashed_pass,first_name=fname,user=user_type,email=email)
+            my_user=User.objects.create_user(username=uname,password=hashed_pass,first_name=fname,email=email)
             my_user.save()
             return redirect('login')
 
