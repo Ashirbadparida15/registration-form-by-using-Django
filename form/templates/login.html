@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+          
+          font-family: Arial, sans-serif;
+          color: white;
+          background-size: cover;
+          background-color: rgb(96, 194, 109);
+          
+          
+        }
+        h1 {
+          text-align: center;
+          margin-top: 30px;
+          color: blue;
+        }
+        form {
+          max-width: 300px;
+          margin: auto;
+          text-align: left;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          background-color: rgb(105, 195, 243);
+          filter: brightness();
+        }
+        label {
+          display: block;
+          margin-bottom: 8px;
+        }
+        input[type="text"], input[type="password"] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 1px solid black;
+          border-radius: 4px;
+          background-color: black;
+          color: white;
+        }
+        input[type="submit"] {
+          width: 100%;
+          background-color: #4caf50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        a {
+          color: red;
+          text-decoration: none;
+        }
+      </style>
+
+</head>
+
+<body>
+    
+    <h1>Login</h1>
+      <form action="" method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label><br>
+        <input type="text"  name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password"  name="password"><br><br>
+        <input type="submit" value="Submit">
+        <a href="/forgot-password">Forgot password?</a>
+        <center><p>Don't have an account? <a href="signup.html">Sign up</a></p></center>
+      </form> 
+      <br>
+</body>
+</html>
